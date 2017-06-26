@@ -29,7 +29,7 @@ if($preference == "either"){
 $status = $stmt->execute();
 
 //３．データ表示
-$view="";
+$view=[];
 if($status==false){
   //execute（SQL実行時にエラーがある場合）
  qerror($stmt);
@@ -37,7 +37,7 @@ if($status==false){
 }else{
   //Selectデータの数だけ自動でループしてくれる
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= $result["category"];
+    $view .= $result;
   }
 }
 

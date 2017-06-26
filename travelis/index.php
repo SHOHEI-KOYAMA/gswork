@@ -5,6 +5,7 @@ session_start();
 //     header("Location: login.php");
 //     exit;
 // }
+$result = $_POST["result"];
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +51,7 @@ session_start();
     
         <div class="row">
            <div id="result">
-               <?=$view?>
+               <?=$result?>
            </div>
             <!-- <div id="search_result">
             </div>-->

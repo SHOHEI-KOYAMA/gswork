@@ -5,7 +5,7 @@
 function db_con(){
 	try {
 	//github上げる用
-	$pdo = new PDO('mysql:dbname=cloth_db;host=localhost;charset=utf8','root','root');
+	$pdo = new PDO('mysql:dbname=shoheikoya_gs_db;host=mysql543.db.sakura.ne.jp;charset=utf8','shoheikoya','koya7toho');
 
 	} catch (PDOException $e) {
 	  exit('データベースに接続できませんでした。'.$e->getMessage());

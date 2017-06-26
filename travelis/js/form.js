@@ -45,7 +45,17 @@ $.ajax({
       }
       }).done((data)=>{
         console.log(data);
-          console.log("success!");
+        console.log("success!");
+
+        $.ajax({
+          type:"POST",
+          url:"index.php",
+          data:{
+            result:data
+          }
+        }).done((data)=>{
+          window.location.href = "./index.php";
+        });
 
       }).fail((data)=>{
         console.log("failed");
